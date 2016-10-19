@@ -1,5 +1,5 @@
 # LensLab
-Small GUI for designing simple lens arrangements.
+Small GUI for designing simple lens arrangements. Download all files into a folder and run by typing `LensLab;`
 
 The file structure is simple, if in need of substantial refactoring:
 - `LensLab.m` - This is a class inherited from `handle` which defines the app layout and user interaction. As the app is primarily driven by clicking-and-dragging, most of the code here involves altering the `WindowButtonMotionFcn` of the figure, and reacting to calls to it.
