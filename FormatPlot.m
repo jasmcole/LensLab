@@ -34,6 +34,11 @@ switch version('-release')
         fontsize = fontsize/1.5;
         linewidth = linewidth/2;
         markersize = markersize/2;
+    case '2016b'
+        ticklength = [0.01 0];
+        fontsize = fontsize/1.5;
+        linewidth = linewidth/2;
+        markersize = markersize/2;
 end
 
 set(gca, 'FontSize', fontsize, 'FontName', font)
