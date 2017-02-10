@@ -24,16 +24,16 @@ linewidth  = params.linewidth;
 bgcolour   = params.bgcolour;
 textcolour = params.textcolour;
 
-switch version('-release')
-    case '2015a'
-        ticklength = [0.01];
-    case '2015b'
-        ticklength = [0.01 0];
-    case '2016a'
-        ticklength = [0.01 0];
-        fontsize = fontsize/1.5;
-        linewidth = linewidth/2;
-        markersize = markersize/2;
+if(verLessThan('matlab', '8.6'))
+    ticklength = [0.01];
+else
+    ticklength = [0.01 0];
+end
+   
+if(~verLessThan('matlab', '9.0'))
+    fontsize = fontsize/1.5;
+    linewidth = linewidth/2;
+    markersize = markersize/2;
 end
 
 set(gca, 'FontSize', fontsize, 'FontName', font)

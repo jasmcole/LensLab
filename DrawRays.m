@@ -40,9 +40,9 @@ for m = 1:length(inds)
 end
 
 % Change nrays to add more 'image rays'
-nrays = 2;
+nrays = 5;
 thetamax = atan(1/(2*fnumber));
-thetavec = linspace(0,thetamax,nrays);
+thetavec = [0 linspace(thetamax/nrays,thetamax,nrays-1)];
 hvec = [beamradius zeros(1,nrays-1)];
 
 for n = 1:nrays
